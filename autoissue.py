@@ -32,5 +32,5 @@ while True:
     page += 1
 
 for label, numbers in issues.items():
-    print label, sorted(numbers)
+    print label, ' '.join('#{}'.format(n) for n in sorted(numbers))
     
