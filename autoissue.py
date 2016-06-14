@@ -11,7 +11,7 @@ def download_json(url):
     r = requests.get(url)
 
     if r.status_code != 200:
-        print r.json()
+        print(r.json())
         sys.exit(1)
 
     return r.json()
@@ -51,5 +51,5 @@ while True:
     page += 1
 
 for label, numbers in issues.items():
-    print label, ' '.join('#{}'.format(n) for n in sorted(numbers))
+    print(label + ' ' + ' '.join('#{}'.format(n) for n in sorted(numbers)))
     
